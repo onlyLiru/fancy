@@ -1,0 +1,17 @@
+<div class="list-block media-list">
+    <ul>
+    	{{# this}}
+          <li data-id="{{id}}" class="{{#ifCond isDefault "==" 1}} active {{/ifCond}}">
+            <a external href="javascript:" class="item-link item-content">
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">{{consigneeName}}</div>
+                  <div class="item-after">{{consigneeMobile}}</div>
+                </div>
+                <div class="item-text">{{fullAddress}}</div>
+              </div>
+            </a>
+          </li>
+      {{/this}}
+    </ul>
+</div>

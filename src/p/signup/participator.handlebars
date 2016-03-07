@@ -1,0 +1,33 @@
+<ul>
+{{#each this}}
+  <li data-id={{id}}>
+    <label class="label-checkbox item-content">
+      <input type="checkbox" name="my-checkbox" data-type="0">
+      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+      <div class="item-inner">
+        <div class="item-title-row">
+          <div class="item-title fz22">
+            <span rel="name">{{realName}}
+              {{#ifCond sex "==" 1}}
+                (男)
+              {{/ifCond}}
+              {{#ifCond sex "==" 2}}
+                (女)
+              {{/ifCond}}
+              <span class="fz14 color-gray">
+                {{#if age}}
+                  {{age}}岁
+                {{/if}}
+              </span>
+            </span>
+          </div>
+          <div class="item-after">
+            <i class="color-orange iconfont" rel="delete">&#xe602;</i>
+          </div>
+        </div>
+        <div class="color-gray" rel="phone">{{mobile}}</div>
+      </div>
+    </label>
+  </li>
+{{/each}}
+</ul>

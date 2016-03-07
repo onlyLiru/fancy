@@ -1,0 +1,85 @@
+.scroll-city-select-outer{
+	position: fixed;
+	z-index: 9;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.scroll-city-select{
+	display: -moz-box;
+	display: -webkit-box;
+	display: box;
+	height: 125px;
+	overflow: hidden;
+	background: #f2f2f2;
+	border-top: 1px solid #ccc;
+}
+.scroll-city-select section{
+	-moz-box-flex:1.0;
+	-webkit-box-flex:1.0;
+	box-flex:1.0;
+	text-align: center;
+	position: relative;
+	line-height: 25px;
+	font-size: 14px;
+}
+.scroll-city-select-outer .line{
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	position: absolute;
+	top: 50px;
+	height: 25px;
+}
+
+<div class="scroll-city-select-outer">
+    <div class="scroll-city-select clearfix">
+        <section class="scroll-province">
+            <ul>
+                <li>　</li>
+                <li>　</li>
+                <li>浙江省</li>
+                <li>河南省</li>
+                <li>河北省</li>
+                <li>山西省</li>
+                <li>山东省</li>
+                <li>湖北省</li>
+                <li>湖南省</li>
+                <li>江苏省</li>
+                <li>广东省</li>
+                <li>青海省</li>
+                <li>　</li>
+                <li>　</li>
+            </ul>
+        </section>
+        <section class="scroll-city">
+            <ul>
+                <li>绍兴市</li>
+                <li>衢州</li>
+                <li>温州</li>
+                <li>宁波</li>
+                <li>金华</li>
+                <li>东莞</li>
+                <li>武汉</li>
+                <li>郑州</li>
+                <li>周口</li>
+                <li>商丘</li>
+            </ul>
+        </section>
+        <section class="scroll-area">
+            <ul>
+                <li>绍兴市</li>
+                <li>衢州</li>
+                <li>温州</li>
+                <li>宁波</li>
+                <li>浙江省</li>
+                <li>浙江省</li>
+                <li>浙江省</li>
+                <li>浙江省</li>
+                <li>浙江省</li>
+                <li>浙江省</li>
+            </ul>
+        </section>
+    </div>
+    <p class="line"></p>
+    <button class="sm-button sm-button-gray">保 存</button>
+</div>

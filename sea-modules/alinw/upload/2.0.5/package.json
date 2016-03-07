@@ -1,0 +1,32 @@
+{
+    "family": "alinw",
+    "name": "upload",
+    "version": "2.0.5",
+    "description": "使用HTML5和iframe的文件上传组件",
+    "homepage": "http://gitlab.alibaba-inc.com/alinw/upload",
+    "author": "garcia.wul <garcia.wul@alibaba-inc.com>",
+    "maintainers": [
+        "garcia.wul <garcia.wul@alibaba-inc.com>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://gitlab.alibaba-inc.com/alinw/upload.git"
+    },
+    "bugs": {
+        "url": "http://gitlab.alibaba-inc.com/alinw/upload/issues"
+    },
+    "keywords": [],
+    "licenses": "MIT",
+    "spm": {
+        "output": [
+            "upload.js"
+        ],
+        "alias": {
+            "$": "$",
+            "base": "arale/base/1.1.1/base",
+            "detector": "arale/detector/1.3.0/detector"
+        },
+        "devAlias": {},
+        "engines": {}
+    }
+}

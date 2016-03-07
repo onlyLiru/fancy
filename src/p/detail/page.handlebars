@@ -1,0 +1,95 @@
+    <div class="swiper-container bg-white" data-space-between='10'>
+        <div class="swiper-wrapper">
+            {{# goodsImgDTOList}}
+                <div class="swiper-slide"><img src="{{imageUrl}}@1e_480w_480h_1c_0i_1o_90Q_1x.jpg"></div>
+            {{/goodsImgDTOList}}
+        </div>
+        <div class="banner-pagination"></div>
+    </div>
+
+    <div class="bg-white pd10">
+        <p>{{name}}</p>
+        <p>
+            <span class="price">￥{{price}}</span>　
+            <span class="color-gray fz10 line-throuth">￥{{originalPrice}}</span>
+            <span class="fr">库存：<span id="J-stockNum">{{stockNum}}</span>件</span>
+        </p>
+        <ul class="flex-box1 borderB lh32">
+            <li class="al">快递：{{expressPrice}}元</li>
+            <!-- li class="ar">月销：{{monthSalesNum}}本</li -->
+        </ul>
+
+        <p class="lh32 borderB">
+        <i class="iconfont fr color-gray">&#xe614;</i>
+        <a href="javascript:" class="block color-gray open-panel" data-panel='#panel-sku'>选择 颜色分类 尺码 数量</a></p>
+
+        <div>
+            <i class="iconfont color-orange fz20">&#xe674;</i>
+            <span class="fz14 millde color-black">100%正品</span>
+            <span class="fz12 millde">所售商品均为正品</span>
+        </div>
+        <div>
+            <i class="iconfont color-orange fz20">&#xe676;</i>
+            <span class="fz14 millde color-black">七天包退</span>
+            <span class="fz12 millde">7天无条件退换货</span>
+        </div>
+        <div>
+            <i class="iconfont color-orange fz20">&#xe675;</i>
+            <span class="fz14 millde color-black">闪电发货</span>
+            <span class="fz12 millde">所有商品72小时内发货</span>
+        </div>
+
+    </div>
+
+    <div class="row bg-opacity-title" id="J-collection"></div>
+
+    <h4 class="h4-title pd10">宝贝详情</h4>
+    <div class="bg-white pd10" id="J-g-detail">
+        <ul id="J-specify"></ul>
+        {{# introduction}}
+            <img class="goods-desc-img lazy pb-standalone" data-original="{{this}}">
+        {{/introduction}}
+    </div>
+
+    <!--h4 class="h4-title">宝贝评价<a class="fr" href="javascript:">更多</a></h4>
+    <ul class="goods-list bg-white">
+        <li class="goods-list-item clearfix">
+            <div class="goods-list-img">
+                <img class="borderRadius50" src="//m.360buyimg.com/n7/jfs/t1678/80/972239920/357576/2ce43ecf/55e02f07N9507b4ee.jpg!q70.jpg">
+            </div>
+            <div class="goods-list-description">
+                <h3 class="fz16 mb10">邓丽君<span class="fr fz12">22:08</span></h3>
+                <div class="color-gray">认识观匆匆流逝，我就喜欢这本书！！！！喜欢的不行不行的。</div>
+            </div>
+        </li>
+        <li class="goods-list-item">
+            <div class="goods-list-img">
+                <img class="borderRadius50" src="//m.360buyimg.com/n7/jfs/t1678/80/972239920/357576/2ce43ecf/55e02f07N9507b4ee.jpg!q70.jpg">
+            </div>
+            <div class="goods-list-description">
+                <h3 class="fz16 mb10">Tony<span class="fr fz12">22:08</span></h3>
+                <div class="color-gray">我觉得这里书本很好，非常好，总之就一个字想到那个好。我觉得这里书本很好，非常好，总之就一个字想到那个好。我觉得这里书本很好，非常好，总之就一个字想到那个好。我觉得这里书本很好，非常好，总之就一个字想到那个好。我觉得这里书本很好，非常好，总之就一个字想到那个好。我觉得这里书本很好，非常好，总之就一个字想到那个好。我觉得这里书本很好，非常好，总之就一个字想到那个好。我觉得这里书本很好，非常好，总之就一个字想到那个好。我觉得这里书本很好，非常好，总之就一个字想到那个好。我觉得这里书本很好，非常好，总之就一个字想到那个好。我觉得这里书本很好，非常好，总之就一个字想到那个好。</div>
+            </div>
+        </li>
+    </ul>
+
+    <h3 class="h3-title"><span>猜你喜欢</span></h3>
+    <div class="goods-box">
+        <ul>
+            <li class="clearfix">
+                <a class="img" href="javascript:"><img  src="//m.360buyimg.com/n7/jfs/t1099/340/584783761/444035/83bb7a9c/5530a843N5601590f.jpg!q70.jpg"></a>
+                <span class="desc">问哦发链接链接问哦发链接链接问哦发链接链接问哦发链接链接问哦发链接链接</span>
+                <span class="al color-orange fz16">￥120</span>
+            </li>
+            <li class="clearfix">
+                <a class="img" href="javascript:"><img  src="//m.360buyimg.com/n7/g14/M01/01/15/rBEhV1KLJGYIAAAAAALQ2fs55p8AAF0LQKMJkAAAtDx560.jpg!q70.jpg"></a>
+                <span class="desc">问哦发链接链接</span>
+                <span class="al color-orange fz16">￥120</span>
+            </li>
+            <li class="clearfix">
+                <a class="img" href="javascript:"><img  src="//m.360buyimg.com/n7/g13/M00/0F/1A/rBEhVFJWgtQIAAAAABYy8ainCvkAAD_CwIhjcQAFjMJ922.jpg!q70.jpg"></a>
+                <span class="desc">问哦发链接链接</span>
+                <span class="al color-orange fz16">￥120</span>
+            </li>
+        </ul>
+    </div -->

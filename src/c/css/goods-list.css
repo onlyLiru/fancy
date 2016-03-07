@@ -1,0 +1,72 @@
+.goods-list{
+	margin:0;
+	padding: 0;
+}
+.goods-list-item{
+	position: relative;
+	padding: 10px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.goods-list-item:before,.goods-list-item:after{
+	content: '';
+	display: table;
+}
+.goods-list-item:after{
+	clear: both;
+}
+.goods-list-item:last-child{
+	border-bottom: none;
+}
+
+.goods-list-link{
+	display: block;
+	color: #333!important;
+}
+
+.goods-list-img {
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+	float: left;
+	background: #f2f2f2;
+	border-radius: 2px;
+}
+.goods-list-img img{
+	width: 100%;
+}
+
+.goods-list-description{
+	margin-left: 105px;
+	line-height: 22px;
+}
+
+.goods-list-title{
+	height: 1.8rem;
+	line-height: 0.9rem;
+	margin-bottom: 6px;
+	overflow: hidden;
+	display: -webkit-box;
+	text-overflow:ellipsis;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+
+}
+
+/*列列表*/
+.listColum dd{
+	margin: 0;
+	padding: 0 4%;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	-webkit-text-overflow:ellipsis;
+	-moz-text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow: hidden;
+}
+.listColum dd:not(:last-child){
+	margin-bottom: 4%;
+}
+.row.listColum .col-50{
+	margin-bottom: 4%;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}

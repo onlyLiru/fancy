@@ -1,0 +1,3 @@
+define("/WEB-UED/fancy/dist/p/myActivity/index-debug.css", [], function(require, exports, module) {
+    seajs.importStyle(".buttons-tab:after{height:0}.buttons-tab .button.active{color:#d94b73;border-color:#d94b73}.theme-pink .button:not(.button-fill){border-color:transparent;color:#888}.theme-pink .button:not(.button-fill).active{background:0 0;color:#d94b73;border-color:#d94b73}.isOver .item-inner{background-image:none!important}.d-mes{background:url(/WEB-UED/fancy/src/c/img/t.png) top left repeat-x;background-clip:border;background-origin:border}.d-mes .d-inner{background:url(/WEB-UED/fancy/src/c/img/b.png) bottom left repeat-x;background-clip:border;background-origin:border}.d-in{background-color:#ffbbce}")
+});

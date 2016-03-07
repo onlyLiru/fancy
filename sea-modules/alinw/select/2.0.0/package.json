@@ -1,0 +1,33 @@
+{
+    "family": "alinw",
+    "name": "select",
+    "version": "2.0.0",
+    "description": "select style",
+    "homepage": "",
+    "author": "zhiqing.tzq",
+    "maintainers": [
+        "zhiqing.tzq",
+        "caoke.ck",
+        "garcia.wul"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://gitlab.alibaba-inc.com/alinw/select.git"
+    },
+    "bugs": {
+        "url": ""
+    },
+    "keywords": [],
+    "licenses": "MIT",
+    "spm": {
+        "output": [
+            "select.js"
+        ],
+        "alias": {
+            "$": "$",
+            "araleSelect": "arale/select/0.9.7/select"
+        },
+        "devAlias": {},
+        "engines": {}
+    }
+}

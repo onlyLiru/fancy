@@ -1,0 +1,33 @@
+{
+  "family": "alinw",
+  "name": "pagination",
+  "version": "2.0.3",
+  "description": "pagination based on jQuery",
+  "homepage": "",
+  "author": "孟涛 <zhiqing.tzq@alibaba-inc.com>",
+  "maintainers": [
+    "凯恩 <wenwen.caoww@alibaba-inc.com>",
+    "九神 <hanchao.shc@alibaba-inc.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.alibaba-inc.com/alinw/pagination"
+  },
+  "bugs": {
+    "url": "http://gitlab.alibaba-inc.com/alinw/pagination/issues"
+  },
+  "keywords": [],
+  "licenses": "MIT",
+  "spm": {
+    "output": [
+      "pagination.js",
+      "pagination.css"
+    ],
+    "alias": {
+        "$":"$",
+        "select":"alinw/select/2.0.0/select"
+	},
+    "devAlias": {},
+    "engines": {}
+  }
+}

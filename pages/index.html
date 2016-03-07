@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>阿里投资平台 soucingPool</title>
+        <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.5.7/css/sm.min.css">
+        <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.5.7/css/??sm.min.css,sm-extend.min.css">
+        <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+        <script src="../sea-modules/seajs/seajs.js"></script>
+        <script src="../sea-modules/seajs/seajs-combo.js"></script>
+        <script src="../sea-modules/seajs/seajs-text.js"></script>
+        <script src="../sea-modules/seajs/seajs-style.js"></script>
+        <script src="../sea-modules/seajs/seajs-log.js"></script>
+        <script src="../sea-modules/seajs/json.js"></script>
+        <script src="../src/config.js"></script>
+        <script>
+            seajs.config({
+                alias:{
+                    'jquery':'jquery/jquery/1.10.1/jquery'
+                },
+                paths:{
+                    'platform':'http://192.168.1.184:8081'
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <script>
+            seajs.use('platform/WEB-UED/fancy/dist/p/index/index.css');
+            seajs.use('platform/WEB-UED/fancy/dist/p/index/index');
+        </script>
+    </body>
+
+</html>

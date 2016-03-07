@@ -1,0 +1,1 @@
+define("/WEB-UED/fancy/dist/p/error/index.css",[],function(require,exports,module){seajs.importStyle(".page{background:#fff}")});

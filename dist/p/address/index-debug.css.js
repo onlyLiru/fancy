@@ -1,0 +1,3 @@
+define("/WEB-UED/fancy/dist/p/address/index-debug.css", [], function(require, exports, module) {
+    seajs.importStyle('.button{height:2rem}.button.button-fill{line-height:2rem}.list-block{margin:0}.list-block li.active{background:#846E47;border-radius:4px}.list-block li.active .item-after,.list-block li.active .item-text,.list-block li.active a{color:#fff!important}[href="#router-add"]{display:none}')
+});

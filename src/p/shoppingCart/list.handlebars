@@ -1,0 +1,38 @@
+{{#if CartVOList}}
+    {{# CartVOList}}
+    	<li class="goods-list-item" data-id="{{id}}">
+            <div class="goods-list-img">
+                <a class="goods-list-link external" _href="/goods/detail.html?goodsId={{goodsId}}">
+                    <img src="{{goodsImgUrl}}">
+                </a>
+            </div>
+            <div class="goods-list-description">
+                <div class="goods-list-title pdlr10">
+                    <a class="goods-list-link external" _href="/goods/detail.html?goodsId={{goodsId}}">
+                        <i class="iconfont fz18 color-orange mr5">&#xe646;</i>{{goodsTitle}}
+                    </a>
+                </div>
+                <div class="fz12 color-gray">{{specify}}</div>
+                <div class="color-gray">
+                    <span class="price mr5">￥{{goodsPrice}}</span>
+                    <span class="color-gray fz10 line-throuth">￥{{goodsOriginalPrice}}</span>
+                </div>
+                <div class="pdlr10">
+                    <i class="iconfont fr color-gray J-delete">&#xe60d;</i>
+                    <div class="J-edit-count">
+                        <p class="edit-count color-gray">
+                            <i class="iconfont J-cut">&#xe607;</i>
+                            <span class="J-number">{{goodsNum}}</span>
+                            <i class="iconfont J-add">&#xe608;</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    {{/CartVOList}}
+{{else}}
+    <div class="no-data">
+        <p>暂无数据</p>
+        <i class="iconfont">&#xe688;</i>
+    </div>
+{{/if}}

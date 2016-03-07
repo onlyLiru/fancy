@@ -1,0 +1,1 @@
+define("/WEB-UED/fancy/dist/p/list/index.css",[],function(require,exports,module){seajs.importStyle("")});

@@ -1,0 +1,14 @@
+<ul>
+{{#each salesAttribute}}
+  <li>
+    <div class="item-content">
+      <div class="item-media color-gray fz12">{{attr_name}}</div>
+      <div class="item-inner sku-select" data-name="{{attr_name}}">
+      {{#each attr_value}}
+            <a href="#" class="border sku-item {{#ifCond @index "==" 0}} active {{/ifCond}}">{{attr_v_name}}</a>
+      {{/each}}
+      </div>
+    </div>
+  </li>
+{{/each}}
+</ul>

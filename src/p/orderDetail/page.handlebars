@@ -1,0 +1,153 @@
+
+{{#ifCond state "==" 0}}
+    <nav class="bar bar-tab">
+        <a href="javascript:" class="tab-item bg-orange color-white external J-pay">
+            <span class="tab-label">立即支付</span>
+        </a>
+    </nav>
+{{/ifCond}}
+<div class="content">
+    {{#ifCond state "==" -1}}
+    <div class="bg-orange color-white fz16 lh24 mb10">
+        <div class="order-status relative clearfix">
+            <i class="iconfont fz60 fl relative">&#xe626;</i>
+            <div class="fl">
+                <p class="lh40">订单已取消</p>
+            </div>
+        </div>
+    </div>
+    {{/ifCond}}
+    {{#ifCond state "==" 0}}
+    <div class="bg-orange color-white fz16 lh24 mb10">
+        <div class="order-status relative clearfix">
+            <i class="iconfont fz60 fl relative">&#xe622;</i>
+            <div class="fl">
+                <p class="lh40">等待买家付款</p>
+            </div>
+        </div>
+    </div>
+    {{/ifCond}}
+    {{#ifCond state "==" 1}}
+    <div class="bg-orange color-white fz16 lh24 mb10">
+        <div class="order-status relative clearfix">
+            <i class="iconfont fz60 fl relative">&#xe651;</i>
+            <div class="fl">
+                <p>已付款</p>
+                <p>等待卖家发货</p>
+            </div>
+        </div>
+    </div>
+    {{/ifCond}}
+    {{#ifCond state "==" 2}}
+    <div class="bg-orange color-white fz16 lh24 mb10">
+        <div class="order-status relative clearfix">
+            <i class="iconfont fz60 fl relative">&#xe633;</i>
+            <div class="fl">
+                <p>卖家已发货</p>
+                <p>请耐心等待收货</p>
+            </div>
+        </div>
+    </div>
+    {{/ifCond}}
+    {{#ifCond state "==" 3}}
+    <div class="bg-orange color-white fz16 lh24 mb10">
+        <div class="order-status relative clearfix">
+            <i class="iconfont fz60 fl relative">&#xe653;</i>
+            <div class="fl">
+                <p class="lh40">交易成功</p>
+            </div>
+        </div>
+    </div>
+    {{/ifCond}}
+
+    <div class="mb10 bg-white pd10 relative order-address">
+        <ul>
+            <li>收货人：{{receiveName}}<span class="fr">{{receivePhone}}</span></li>
+            <li>{{receiveAddress}}</li>
+        </ul>
+        <i class="iconfont fz20 address color-gray absolute">&#xe617;</i>
+    </div>
+
+    <div class="mb10">
+            {{#each detailMap}}
+                <ul class="goods-list has-express">
+                {{#each this}}
+                    {{#ifCond @key "!=" "N"}}
+                        <li class="goods-list-item bg-white" data-id="{{id}}">
+                        <a external _href="/goods/detail.html?goodsId={{goodsId}}">
+                            <div class="goods-list-img">
+                                <img src="{{goodsImgUrl}}">
+                            </div>
+                            <div class="goods-list-description">
+                                <div class="goods-list-title color-gray">
+                                    <i class="iconfont fz18 color-orange mr5">&#xe646;</i>{{goodsName}}
+                                </div>
+                                <div class="fz12 color-gray">{{specify}}</div>
+                                <div class="color-gray">
+                                    <span class="price mr5">￥{{salePrice}}</span>
+                                    <span class="color-gray fz10 line-throuth">￥{{originalPrice}}</span>
+                                </div>
+                            </div>
+                        </a>
+                        </li>
+                        <li class="goods-list-item bg-white mb10 hide ar J-view-li">
+                            <a class="f-btn f-btn-orange J-view" data-expressNo="{{expressNo}}" data-expressCode="{{expressCompanyName}}">查看物流</a>
+                        </li>
+                    {{/ifCond}}
+                {{/each}}
+                </ul>
+            {{/each}}
+        <ul class="goods-list mb10">
+            {{#each detailMap}}
+                {{#each this}}
+                    {{#ifCond @key "==" "N"}}
+                        <li class="goods-list-item bg-white" data-id="{{id}}">
+                        <a external _href="/goods/detail.html?goodsId={{goodsId}}">
+                            <div class="goods-list-img">
+                                <img src="{{goodsImgUrl}}">
+                            </div>
+                            <div class="goods-list-description">
+                                <div class="goods-list-title color-gray">
+                                    <i class="iconfont fz18 color-orange mr5">&#xe646;</i>{{goodsName}}
+                                </div>
+                                <div class="fz12 color-gray">{{specify}}</div>
+                                <div class="color-gray">
+                                    <span class="price mr5">￥{{salePrice}}</span>
+                                    <span class="color-gray fz10 line-throuth">￥{{originalPrice}}</span>
+                                </div>
+                            </div>
+                        </a>
+                        </li>
+                    {{/ifCond}}
+                {{/each}}
+            {{/each}}
+        </ul>
+        
+        <div class="color-gray bg-white ar pd10 borderT borderB">
+            {{#ifCond state "==" "1"}}
+                <a class="fl ml5 J-return" href="#returnPage" data-orderNo="{{orderNo}}">申请退款</a>
+            {{/ifCond}}
+            {{#ifCond state "==" "5"}}
+                <a class="fl ml5 J-cancel-return" href="#returnCancelPage" data-orderNo="{{orderNo}}">取消退款</a>
+            {{/ifCond}}
+            {{#ifCond state "==" "7"}}
+                <span class="fl ml5" href="javascript:">退款完成</span>
+            {{/ifCond}}
+
+            共计{{goodsCount}}件 合计：<span class="color-orange">￥{{totalPrice}}</span>
+            (含运费￥{{expressCost}})
+        </div>
+    </div>
+
+    <div class="mb10 bg-white pd10">
+        <ul>
+            <!-- li class="color-orange">自动确认收货时间：还剩5天22小时</li -->
+            <li>订单编号：{{orderNo}}</li>
+            <!-- li>支付宝交易号：{{tradeNo}}</li -->
+            <li>创建时间：{{createTimeString}}</li>
+            <!-- li>付款时间：{{paymentTimeString}}</li -->
+            <!-- li>发货时间：{{consignmentTimeString}}</li -->
+        </ul>
+    </div>
+
+</div>

@@ -1,0 +1,14 @@
+{{#if CartVOList}}
+	{{#each imgList}}
+	    <div class="swiper-slide">
+	        <a external _href="/activity/activityDetail.html?id={{activityId}}" class="external block">
+	            <img src="{{imageUrl}}" >
+	        </a>
+	    </div>
+	{{/each}}
+{{else}}
+	<div class="no-data">
+	    <p>暂无数据</p>
+	    <i class="iconfont">&#xe688;</i>
+	</div>
+{{/if}}

@@ -1,0 +1,18 @@
+{{# goodsVOList}}
+    <li class="goods-list-item">
+        <a class="goods-list-link external" href="/goods/detail.html?goodsId={{id}}">
+            <div class="goods-list-img">
+                <img class="lazy" data-original="{{defaultImgUrl}}@1e_120w_120h_1c_0i_1o_90Q_1x.jpg">
+            </div>
+            <div class="goods-list-description">
+                <div class="goods-list-title">
+                    <i class="iconfont fz18 color-orange mr5">&#xe646;</i>{{name}}
+                </div>
+                <div class="goods-list-price color-orange fz16 mt20">
+                    <span class="price mr5">￥{{price}}</span>
+                    <span class="color-gray fz10 line-throuth">￥{{originalPrice}}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+{{/goodsVOList}}

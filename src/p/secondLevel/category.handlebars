@@ -1,0 +1,15 @@
+{{# this}}
+	{{#with object}}
+		<h4 class="bg-white borderB">{{name}}</h4>
+	{{/with}}
+	<div class="row">
+		{{#each list}}
+			<div class="col-25 ac list-div auto-img">
+				<a href="/goods/list.html?categoryId={{id}}" class="external block">
+					<img src="{{imgUrl}}" >
+				</a>
+				<span class="name">{{name}}</span>
+			</div>
+		{{/each}}
+	</div>
+{{/this}}

@@ -1,0 +1,20 @@
+<ul class="pd10">
+    <li>物流公司：{{expressCode}}</li>
+    <li>物流单号：{{expressNo}}</li>
+</ul>
+<div class="bg-white pd10 fz12">
+	<ul class="express-ul">
+		{{#each trace}}
+			{{#ifCond @index "==" 0}}
+				<li class="mb10 color-orange">{{AcceptStation}}<br>
+					<span class="color-gray fz12">{{AcceptTime}}</span>
+					<i class="iconfont">&#xe620;</i>
+				</li>
+			{{/ifCond}}
+			<li class="mb10">{{AcceptStation}}<br>
+				<span class="color-gray fz12">{{AcceptTime}}</span>
+				<i class="iconfont color-gray">&#xe620;</i>
+			</li>
+		{{/each}}
+	</ul>
+</div>

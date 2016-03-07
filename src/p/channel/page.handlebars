@@ -1,0 +1,92 @@
+<div class="swiper-container" data-space-between='10'>
+    {{#each block1}}
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="{{goodsUrl}}" class="external block">
+                <img src="{{imageUrl}}">
+            </a>
+        </div>
+    </div>
+    {{/each}}
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="row mb10 bg-white">
+    {{#each block2}}
+    <div class="col-33">
+        <a href="{{goodsUrl}}" class="external auto-img">
+            <img class="lazy" data-original="{{imageUrl}}" >
+        </a>
+    </div>
+    {{/each}}
+</div>
+
+<div class="row mb10 bg-white">
+    {{#each block3}}
+        <div class="col-33">
+            <a href="{{goodsUrl}}" class="external auto-img">
+                <img class="lazy" data-original="{{imageUrl}}" >
+            </a>
+        </div>
+    {{/each}}
+</div>
+
+<div class="row bg-white auto-img mb10">
+
+    <div class="col-40 auto-img">
+        {{#each block4}}
+            {{#ifCond sort "==" 1}}
+                <a href="{{goodsUrl}}" class="external block">
+                    <img class="lazy" data-original="{{imageUrl}}">
+                </a>
+            {{/ifCond}}
+        {{/each}}
+    </div>
+    <div class="col-60 borderL">
+        <div class="borderB">
+        {{#each block4}}
+            {{#ifCond sort "==" 2}}
+                <a href="{{goodsUrl}}" class="external block">
+                    <img class="lazy" data-original="{{imageUrl}}">
+                </a>
+            {{/ifCond}}
+        {{/each}}
+        </div>
+        <div class="row">
+            <div class="col-50 auto-img">
+            {{#each block4}}
+                {{#ifCond sort "==" 3}}
+                    <a href="{{goodsUrl}}" class="external block">
+                        <img class="lazy" data-original="{{imageUrl}}">
+                    </a>
+                {{/ifCond}}
+            {{/each}}
+            </div>
+            <div class="col-50 borderL">
+            {{#each block4}}
+                {{#ifCond sort "==" 4}}
+                    <a href="{{goodsUrl}}" class="external block">
+                        <img class="lazy" data-original="{{imageUrl}}">
+                    </a>
+                {{/ifCond}}
+            {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#each block5}}
+    <div class="row bg-white home-activity-img">
+        <div class="auto-img relative">
+            <a href="{{goodsUrl}}" class="external block"><img class="lazy" data-original="{{imageUrl}}" ></a>
+        </div>
+        <p class="fz12 pdlr10 absolute">
+            <span class="price fr color-red">{{#if price}} ￥{{price}} {{/if}}</span>
+            {{title}}
+        </p>
+    </div>
+    <div class="fz16 bg-white pd10">
+        {{description}}
+    </div>
+{{/each}}
+<br><br>

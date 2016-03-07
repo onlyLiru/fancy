@@ -1,0 +1,41 @@
+{
+    "family": "alinw",
+    "name": "calendar",
+    "version": "1.1.1",
+    "description": "Alinw calendar widget.",
+    "author": "ermin.zem <ermin.zem@alibaba-inc.com>",
+    "maintainers": [
+        "昊祯 <ermin.zem@alibaba-inc.com>"
+    ],
+    "homepage": "http://alinw.spmjs.org/calendar/",
+    "repository": {
+        "type": "git",
+        "url": "http://gitlab.alibaba-inc.com/alinw/calendar/"
+    },
+    "bugs": {
+        "url": "http://gitlab.alibaba-inc.com/alinw/calendar/issues"
+    },
+    "keywords": ["widget", "month", "datepicker", "timepicker"],
+
+    "spm": {
+        "alias": {
+            "$": "$",
+            "moment": "gallery/moment/2.0.0/moment",
+            "base": "arale/base/1.1.1/base",
+            "position": "arale/position/1.0.1/position",
+            "iframe-shim": "arale/iframe-shim/1.0.2/iframe-shim",
+            "handlebars": "gallery/handlebars/1.0.2/handlebars",
+            "widget": "arale/widget/1.1.1/widget",
+            "nw-tip": "alinw/tip/2.1.0/tip"
+        },
+        "output": [
+            "calendar.js",
+            "calendar.css",
+            "i18n/en.js",
+            "i18n/fr.js",
+            "i18n/ja.js",
+            "i18n/zh-cn.js",
+            "i18n/zh-tw.js"
+        ]
+    }
+}

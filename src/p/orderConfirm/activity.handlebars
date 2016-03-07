@@ -1,0 +1,41 @@
+{{#if receiveAddress}}
+    <div class="mb10 bg-white pd10 relative order-address">
+    <a class="block color-gray" href="#address-list">
+        <ul>
+            <li>收货人：{{receiveName}}<span class="fr">{{receivePhone}}</span></li>
+            <li>{{receiveAddress}}</li>
+        </ul>
+        <i class="iconfont fz20 address color-gray absolute">&#xe617;</i>
+        <i class="iconfont absolute fz14 color-gray map">&#xe614;</i>
+    </a>
+    </div>
+{{else}}
+    <div id="J-the-address">
+        <div class="mb10 bg-white pd40 ac" id="J-add-address">
+            <a href="#address-add"><i class="iconfont fz60 color-orange">&#xe65b;</i></a>
+        </div>
+    </div>
+{{/if}}
+
+<div class="pd10 bg-white borderB">{{name}}</div>
+<ul class="goods-list bg-gray">
+    {{#each orderDetailVOList}}
+    	<li class="goods-list-item">
+            <div class="goods-list-img">
+                <img src="{{goodsImgUrl}}">
+            </div>
+            <div class="goods-list-description">
+                <div class="goods-list-title">
+                    <i class="iconfont fz18 color-orange mr5">&#xe646;</i>{{goodsName}}
+                </div>
+                <div class="goods-list-price">
+                    <span class="color-orange fz16">￥{{price}}</span>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</ul>
+<div class="pd10 bg-white borderT clearfix">
+    <div class="J-edit-count fr"></div>
+    <p class="lh32">购买数量:</p>
+</div>

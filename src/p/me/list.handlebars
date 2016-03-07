@@ -1,0 +1,51 @@
+{{# this}}
+    <div class="bg-white mb10">
+        <ul class="goods-list">
+            {{# orderDetailVOList}}
+                <a class="external" href="/order/orderDetail.html?orderNo={{orderNo}}">
+                <li class="goods-list-item" data-id="{{id}}" >
+                    <div class="goods-list-img">
+                        <img src="{{goodsImgUrl}}">
+                    </div>
+                    <div class="goods-list-description">
+                        <div class="goods-list-title color-gray">
+                            <i class="iconfont fz18 color-orange mr5">&#xe646;</i>{{goodsName}}
+                        </div>
+                        <div class="fz12 color-gray">{{specify}}</div>
+                        <div class="color-gray">
+                            <span class="price mr5">￥{{salePrice}}</span>
+                            <span class="color-gray fz10 line-throuth">￥{{originalPrice}}</span>
+                            <span class="fr">x{{goodsCount}}</span>
+                        </div>
+                    </div>
+                </li>
+                </a>
+            {{/orderDetailVOList}}
+        </ul>
+        <div class="color-gray ar pd10 borderT borderB">
+            共计{{goodsCount}}件 合计：<span class="color-orange">￥{{totalPrice}}</span>
+            (含运费￥{{expressCost}})
+        </div>
+        <div class="pd10 ar">
+            {{#ifCond state "==" -1}}
+                已取消　
+                <a class="f-btn f-btn-gray J-delete" data-orderNo="{{orderNo}}">删除订单</a>
+            {{/ifCond}}
+            {{#ifCond state "==" 0}}
+                <a class="f-btn f-btn-gray mr5 J-cancle" data-orderNo="{{orderNo}}">取消订单</a>
+                <a class="f-btn f-btn-orange J-pay" data-orderNo="{{orderNo}}">立即付款</a>
+            {{/ifCond}}
+            {{#ifCond state "==" 1}}
+                已付款，等待卖家发货
+            {{/ifCond}}
+            {{#ifCond state "==" 2}}
+                卖家已发货,等待收货
+            {{/ifCond}}
+            {{#ifCond state "==" 3}}
+                交易成功
+                <a class="f-btn f-btn-gray mr5 J-delete" data-orderNo="{{orderNo}}">删除订单</a>
+                <!-- a class="f-btn f-btn-orange J-comments">评价</a -->
+            {{/ifCond}}
+        </div>
+    </div>
+{{/this}}

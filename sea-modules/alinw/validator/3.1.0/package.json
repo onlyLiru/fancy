@@ -1,0 +1,31 @@
+{
+    "family": "alinw",
+    "name": "validator",
+    "version": "3.1.0",
+    "author": "Shawn <shaoshuai0102@gmail.com>",
+    "tag": "widget",
+    "keyword": ["widget"],
+    "description": "不错的表单校验组件。",
+    "license": "MIT",
+    "tests": ["rules", "core", "core2", "validator"],
+    "spm": {
+        "alias": {
+            "$":"$",
+            "widget": "arale/widget/1.1.1/widget"
+        },
+        "output": ["./core.js", "./validator.js"]
+    },
+    "deploy": {
+        "server": "dev",
+        "host": "assets.p501.alipay.net",
+        "path": "/home/admin/wwwroot/assets/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://gitlab.alibaba-inc.com:alinw/validator"
+    },
+    "bugs": {
+        "email": "shaoshuai0102@gmail.com",
+        "url": "http://gitlab.alibaba-inc.com:alinw/validator/issues"
+    }
+}

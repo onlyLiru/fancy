@@ -1,0 +1,18 @@
+<li>
+  <a href="#" class="item-content">
+    {{# goodsImgDTOList}}
+      {{#ifCond @index "==" 0}}
+        <div class="item-media">
+          <img src="{{imageUrl}}@1e_480w_480h_1c_0i_1o_90Q_1x.jpg" width="80">
+        </div>
+      {{/ifCond}}
+    {{/goodsImgDTOList}}
+
+    <div class="item-inner">
+      <div class="item-title-row">
+        <div class="item-title"><span class="price">￥{{price}}</span></div>
+      </div>
+      <div class="item-text">{{name}}</div>
+    </div>
+  </a>
+</li>
